@@ -3,7 +3,7 @@ import { account } from "./appwrite";
 
 export const user = {
     login: async () => {
-        account.createOAuth2Session('discord', 'http://localhost:5173/success', 'http://localhost:5173/failure')
+        account.createOAuth2Session('discord', `https://${window.location.hostname}/success`, `https://${window.location.hostname}/failure`)
     },
 
     get: async () => {
