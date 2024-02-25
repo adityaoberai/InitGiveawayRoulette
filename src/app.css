@@ -1,0 +1,22 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: hsl(var(--color-primary-100));
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    border-radius: var(--border-radius-medium);
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    height: 70%;
+    background-color: hsl(var(--color-neutral-0));
+}
