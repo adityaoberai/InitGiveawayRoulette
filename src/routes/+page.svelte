@@ -13,7 +13,7 @@
 
     <h1 class="heading-level-1 u-margin-32">Init Giveaway!</h1>
 
-    <p class="body-text-1 u-bold u-margin-32">Login with Discord and get a change to win an Init_ t-tshirt!</p>
+    <p class="body-text-1 u-bold u-margin-32">Login with Discord and get a change to win an Init_ t-shirt!</p>
 
     <button class="button is-big u-margin-32" on:click={login}>Sign in with Discord</button>
 </div>
