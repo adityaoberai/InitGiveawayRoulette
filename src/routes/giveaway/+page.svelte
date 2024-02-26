@@ -50,32 +50,33 @@
     });
 </script>
 
-<section class="u-flex-vertical">
+<section class="u-flex-vertical u-gap-16">
         <InitHeading heading={heading} />
-        <div class="wheel u-flex-vertical u-gap-32">
+        <div class="wheel u-flex-vertical">
             <div class="wheel-container u-flex-vertical">
             </div>
         </div>
-        <button class="button is-big u-margin-32" on:click={spin}>Spin The Wheel</button>
+        <button class="button is-big" on:click={spin}>Spin The Wheel</button>
 </section>
 
 <style>
     section {
-        height: 80vh;
+        height: 90vh;
         width: 100vw;
         margin: auto;
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .wheel {
-        height: 70vh;
-        width: 70vw;
+        height: fit-content;
+        width: 55vw;
         align-items: center;
+        justify-content: center;
     }
     
     .wheel .wheel-container {
-        height: 60vh;
-        width: 60vw;
+        height: 55vh;
+        width: 55vw;
     }
-
 </style>
