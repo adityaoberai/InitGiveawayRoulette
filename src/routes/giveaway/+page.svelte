@@ -61,21 +61,21 @@
 
 <style>
     section {
-        height: 80%;
-        width: 100%;
+        height: 80vh;
+        width: 100vw;
         margin: auto;
         align-items: center;
     }
 
     .wheel {
-        height: 70%;
-        width: 70%;
+        height: 70vh;
+        width: 70vw;
         align-items: center;
     }
     
     .wheel .wheel-container {
-        height: 100%;
-        width: 100%;
+        height: 60vh;
+        width: 60vw;
     }
 
 </style>
