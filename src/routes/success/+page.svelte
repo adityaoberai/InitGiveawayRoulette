@@ -15,6 +15,12 @@
     });
 </script>
 
+<nav>
+    <a href="/">
+        <img src="/logotype.svg" alt="Appwrite logo">
+    </a>
+</nav>
+
 <div class="container u-flex-vertical">
     <h1 class="heading-level-1 u-margin-32">Success!</h1>
     <p class="body-text-1 u-bold u-margin-32">Thanks for participating in the giveaway, {userId}</p>

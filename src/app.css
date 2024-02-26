@@ -1,22 +1,71 @@
+@font-face {
+    font-family: "Aeonik Pro";
+    src: url("/AeonikPro-Regular.ttf");
+  }
+
 html {
-    font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: hsl(var(--color-primary-100));
+    background-color: #19191C;
     display: flex;
     align-items: center;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 32px;
+    top: 0;
+}
+
 .container {
-    border-radius: var(--border-radius-medium);
     align-items: center;
     justify-content: center;
     max-width: 50%;
-    height: 70%;
-    background-color: hsl(var(--color-neutral-0));
+    background-color: #232325;
+    border-radius: 16px;
+    border: 1px solid rgba(35, 35, 37, 0.90);
+    margin: auto;
 }
+
+.card {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ADADB0;
+    font-family: "Aeonik Pro";
+}
+
+p {
+    color: #ADADB0;
+    font-family: 'Inter';
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/*
+.button {
+    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
+    border-radius: 8px;
+}
+
+.button:hover {
+    background: linear-gradient(94deg, #FE536D 100%, #FD366E 60.94%, #FD366E 0%);
+}
+*/

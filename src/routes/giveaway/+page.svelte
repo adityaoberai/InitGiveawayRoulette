@@ -42,28 +42,41 @@
         wheel.radius = 0.95;
         wheel.isInteractive = false;
         wheel.overlayImage = '/picker.png';
+        wheel.itemBackgroundColors = ['#27272A'];
+        wheel.itemLabelColors = ['#FFFFFF'];
+        wheel.itemLabelFont = 'sans-serif';
+        wheel.itemLabelFontSize = 20;
+        wheel.borderColor = '#3d3d3f';
+        wheel.lineColor = '#3d3d3f';
     });
 </script>
 
-<div class="container u-flex-vertical u-margin-auto u-gap-32">
-    <h1 class="winnerHeading heading-level-1">Find the winner!</h1>
-    <div class="wheel u-flex-vertical">
-        <div class="wheel-container u-flex-vertical">
+<section class="u-flex-vertical">
+    <div class="container u-flex-vertical u-gap-32">
+        <div class="card u-flex-vertical">
+            <img class="u-width-140" src="/init.svg" alt="Init logo">
+            <h1 class="winnerHeading heading-level-1 u-margin-block-start-32">Find the winner</h1>
         </div>
+        <div class="wheel u-flex-vertical u-gap-32">
+            <div class="wheel-container u-flex-vertical">
+            </div>
+        </div>
+        <button class="button is-big u-margin-16" on:click={spin}>Spin The Wheel</button>
     </div>
-    <button class="button is-big u-margin-16" on:click={spin}>Spin The Wheel</button>
-</div>
+</section>
 
 <style>
-
-    .wheel {
-        height: 70%;
-        width: 80%;
-        align-items: center;
+    section {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: absolute;
     }
 
-    .wheel img {
-        height: 10%;
+    .wheel {
+        height: 80%;
+        width: 80%;
+        align-items: center;
     }
     
     .wheel .wheel-container {
@@ -72,8 +85,10 @@
     }
 
     .container {
-        width: 70%;
+        max-width: 70%;
         height: 70%;
+        background-color: transparent;
+        border: 0;
     }
 
 </style>
