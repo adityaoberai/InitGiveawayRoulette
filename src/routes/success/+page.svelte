@@ -2,6 +2,7 @@
     import { user } from "$lib/user";
     import { db } from "$lib/database";
 	import { onMount } from "svelte";
+    import NavBar from "../../components/NavBar.svelte";
     
     let userId = '';
 
@@ -15,11 +16,7 @@
     });
 </script>
 
-<nav>
-    <a href="/">
-        <img src="/logotype.svg" alt="Appwrite logo">
-    </a>
-</nav>
+<NavBar />
 
 <div class="container u-flex-vertical">
     <h1 class="heading-level-1 u-margin-32 u-normal">Success!</h1>

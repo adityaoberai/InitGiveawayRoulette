@@ -2,9 +2,9 @@
     export let heading = '';
 </script>
 
-<div class="card">
-    <img class="u-width-140" src="/init.svg" alt="Init logo">
-    <h1 class="heading-level-1 u-margin-block-start-16 u-normal">{heading}</h1>
+<div class="card"> 
+    <img src="/init.svg" width="100px" alt="Init logo">
+    <h1 class="heading-level-1 u-margin-block-start-auto u-normal">{heading}</h1>
 </div>
 
 <style>

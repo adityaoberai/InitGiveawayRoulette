@@ -1,18 +1,13 @@
 <script>
     import { user } from "$lib/user";
     import InitHeading from "../components/InitHeading.svelte";
+    import NavBar from "../components/NavBar.svelte";
 
     function login() {
         user.login();
     }
 </script>
-
-<nav>
-    <a href="/">
-        <img src="/logotype.svg" alt="Appwrite logo">
-    </a>
-</nav>
-
+<NavBar />
 <section class="u-flex-vertical">
     <div class="container u-flex-vertical">
         <InitHeading heading='Giveaway' />
@@ -30,9 +25,24 @@
 
 <style>
     section {
-        height: 100%;
         width: 100%;
-        bottom: 0;
-        position: absolute;
+        z-index: 0;
+        position: relative;
+        top: 0;
+        width: fit-content;
+        height: min-content;
+        margin: auto;
+    }
+
+    @media (max-width: 768px) {
+        img {
+            max-width: 80%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        img {
+            max-width: 60%;
+        }
     }
 </style>

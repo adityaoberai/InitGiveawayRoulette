@@ -3,37 +3,27 @@
     src: url("/AeonikPro-Regular.ttf");
   }
 
-html {
-    height: 100vh;
-    min-height: 100vh;
-    max-width: 100vw;
-}
-
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
     background-color: #19191C;
     display: flex;
     align-items: center;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 32px;
-    top: 0;
 }
 
 .container {
     align-items: center;
     justify-content: center;
     max-width: 50%;
-    background-color: #232325;
+    width: fit-content;
+    height: min-content;
+    background-color: rgba(35, 35, 37);
     border-radius: 16px;
-    border: 1px solid rgba(35, 35, 37, 0.90);
+    border: 1px solid #FFFFFF14;
     margin: auto;
+    padding: 0;
 }
 
 h1 {
