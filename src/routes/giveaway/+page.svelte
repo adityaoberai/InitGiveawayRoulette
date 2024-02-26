@@ -41,13 +41,13 @@
         wheel = new Wheel(container, props);
         wheel.radius = 0.95;
         wheel.isInteractive = false;
+        wheel.overlayImage = '/picker.png';
     });
 </script>
 
 <div class="container u-flex-vertical u-margin-auto u-gap-32">
     <h1 class="winnerHeading heading-level-1">Find the winner!</h1>
     <div class="wheel u-flex-vertical">
-        <img src="/arrow.svg" alt="Arrow">
         <div class="wheel-container u-flex-vertical">
         </div>
     </div>
