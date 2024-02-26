@@ -19,7 +19,7 @@
 
         <img src="/tshirt.png" alt="Init tshirt">
 
-        <p class="heading-level-6 u-margin-32">Login with Discord and get a change to win an Init_ t-shirt!</p>
+        <p class="heading-level-6 u-margin-32">Login with Discord and get a chance to win an Init_ t-shirt!</p>
 
         <button class="button is-big u-margin-32" on:click={login}>
             <span class="icon-discord"></span>

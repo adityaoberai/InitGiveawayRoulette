@@ -52,13 +52,28 @@ p {
     }
 }
 
-/*
 .button {
-    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
+    display: inline-flex;
+    padding: 9px 14px 9px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     border-radius: 8px;
+    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
 }
 
 .button:hover {
-    background: linear-gradient(94deg, #FE536D 100%, #FD366E 60.94%, #FD366E 0%);
+    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
+    box-shadow: 0px 0px 32px 0px rgba(253, 54, 110, 0.32);
 }
-*/
+
+.button:active {
+    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
+    box-shadow: 0px 0px 32px 0px rgba(253, 54, 110, 0.24);
+}
+
+.button:focus-visible {
+    border: 2px solid var(--background, #19191C);
+    background: linear-gradient(94deg, #FD366E 0%, #FD366E 60.94%, #FE536D 100%);
+    box-shadow: 0px 0px 0px 1px #85DBD8;
+}
