@@ -4,7 +4,7 @@ import { database } from './appwrite';
 
 export const db = {
 	list: async () => {
-		var entries = await database.listDocuments('raffledb', 'raffle', [
+		var entries = await database.listDocuments('raffledb', 'day1', [
 			Query.limit(500),
 			Query.select(['discordName'])
 		]);
@@ -20,7 +20,7 @@ export const db = {
 
 	add: async (discordName) => {
 		try {
-			await database.createDocument('raffledb', 'raffle', ID.unique(), {
+			await database.createDocument('raffledb', 'day1', ID.unique(), {
 				discordName: discordName
 			});
 			console.log('Added to the raffle');

@@ -1,13 +1,18 @@
 <script>
     import { user } from "$lib/user";
     import { db } from "$lib/database";
+	import { onMount } from "svelte";
     
     let userId = '';
 
     async function getUserId() {
         userId = (await user.get()).name;
         await db.add(userId);
-    } getUserId();
+    }
+
+    onMount(() => {
+        getUserId();
+    });
 </script>
 
 <div class="container u-flex-vertical">
