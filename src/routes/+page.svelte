@@ -1,5 +1,6 @@
 <script>
     import { user } from "$lib/user";
+    import InitHeading from "../components/InitHeading.svelte";
 
     function login() {
         user.login();
@@ -14,10 +15,7 @@
 
 <section class="u-flex-vertical">
     <div class="container u-flex-vertical">
-        <div class="card u-flex-vertical">
-            <img class="u-width-140" src="/init.svg" alt="Init logo">
-            <h1 class="heading-level-1 u-margin-16">Giveaway</h1>
-        </div>
+        <InitHeading heading='Giveaway' />
 
         <img src="/tshirt.png" alt="Init tshirt">
 

@@ -3,9 +3,10 @@
   
     import { Wheel } from 'spin-wheel';
 	import { onMount } from 'svelte';
+    import InitHeading from '../../components/InitHeading.svelte';
     import * as easing from 'easing-utils';
 	
-    let winner = '';
+    let heading = 'Find the winner';
 
     export let data;
 
@@ -25,13 +26,11 @@
         var direction = 1;
         var easingFunction = easing.easeOutCubic;
 
-        //wheel.spin(700);
-
         wheel.spinToItem(winningIndex, duration, spinToCenter, numberOfRevolutions, direction, easingFunction)
 
         wheel.onRest = (e) => {
-            winner = props.items[wheel.getCurrentIndex()].label;
-            document.querySelector('.winnerHeading').innerHTML = `Congratulations to the winner: ${winner}!`;
+            var winner = props.items[wheel.getCurrentIndex()].label;
+            heading = `Congratulations to the winner: ${winner}!`;
         };
     }
 
@@ -52,10 +51,7 @@
 </script>
 
 <section class="u-flex-vertical">
-        <div class="card u-flex-vertical u-margin-32">
-            <img class="u-width-140" src="/init.svg" alt="Init logo">
-            <h1 class="winnerHeading heading-level-1 u-margin-block-start-32">Find the winner</h1>
-        </div>
+        <InitHeading heading={heading} />
         <div class="wheel u-flex-vertical u-gap-32">
             <div class="wheel-container u-flex-vertical">
             </div>
