@@ -12,9 +12,9 @@
     <div class="container u-flex-vertical">
         <InitHeading heading='Giveaway' />
 
-        <img src="/tshirt.png" alt="Init tshirt">
+        <img src="/tshirt.png" alt="Plain black T-shirt with the text Init">
 
-        <p class="heading-level-6 u-margin-32">Login with Discord and get a chance to win an Init_ t-shirt!</p>
+        <p class="heading-level-6 u-margin-32">Login with Discord and get a chance to win an Init_ T-shirt!</p>
 
         <button class="button is-big u-margin-32" on:click={login}>
             <span class="icon-discord"></span>
