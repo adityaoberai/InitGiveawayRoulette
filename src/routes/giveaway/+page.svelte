@@ -52,8 +52,7 @@
 </script>
 
 <section class="u-flex-vertical">
-    <div class="container u-flex-vertical u-gap-32">
-        <div class="card u-flex-vertical">
+        <div class="card u-flex-vertical u-margin-32">
             <img class="u-width-140" src="/init.svg" alt="Init logo">
             <h1 class="winnerHeading heading-level-1 u-margin-block-start-32">Find the winner</h1>
         </div>
@@ -61,34 +60,26 @@
             <div class="wheel-container u-flex-vertical">
             </div>
         </div>
-        <button class="button is-big u-margin-16" on:click={spin}>Spin The Wheel</button>
-    </div>
+        <button class="button is-big u-margin-32" on:click={spin}>Spin The Wheel</button>
 </section>
 
 <style>
     section {
-        height: 100%;
+        height: 80%;
         width: 100%;
-        top: 0;
-        position: absolute;
+        margin: auto;
+        align-items: center;
     }
 
     .wheel {
-        height: 80%;
-        width: 80%;
+        height: 70%;
+        width: 70%;
         align-items: center;
     }
     
     .wheel .wheel-container {
-        height: 90%;
+        height: 100%;
         width: 100%;
-    }
-
-    .container {
-        max-width: 70%;
-        height: 70%;
-        background-color: transparent;
-        border: 0;
     }
 
 </style>
