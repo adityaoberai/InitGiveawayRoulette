@@ -1,11 +1,11 @@
 // @ts-nocheck
 import { Query, ID } from 'appwrite';
 import { database } from './appwrite';
-import { COLLECTION_NAME } from '../constants';
+import { COLLECTION_NAME, DATABASE_NAME } from '../constants';
 
 export const db = {
 	list: async () => {
-		var entries = await database.listDocuments('raffledb', COLLECTION_NAME, [
+		var entries = await database.listDocuments(DATABASE_NAME, COLLECTION_NAME, [
 			Query.limit(500),
 			Query.select(['discordName'])
 		]);
@@ -21,7 +21,7 @@ export const db = {
 
 	add: async (discordName) => {
 		try {
-			await database.createDocument('raffledb', COLLECTION_NAME, ID.unique(), {
+			await database.createDocument(DATABASE_NAME, COLLECTION_NAME, ID.unique(), {
 				discordName: discordName
 			});
 			console.log('Added to the raffle');
