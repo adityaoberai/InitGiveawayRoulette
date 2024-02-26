@@ -1,19 +1,48 @@
 <script>
     import { user } from "$lib/user";
+    import InitHeading from "../components/InitHeading.svelte";
+    import NavBar from "../components/NavBar.svelte";
 
     function login() {
         user.login();
     }
 </script>
+<NavBar />
+<section class="u-flex-vertical">
+    <div class="container u-flex-vertical">
+        <InitHeading heading='Giveaway' />
 
-<div class="container u-flex-vertical">
-    <div class="card u-width-140">
-        <img src="/logo.png" alt="Appwrite logo">
+        <img src="/tshirt.png" alt="Init tshirt">
+
+        <p class="heading-level-6 u-margin-32">Login with Discord and get a chance to win an Init_ t-shirt!</p>
+
+        <button class="button is-big u-margin-32" on:click={login}>
+            <span class="icon-discord"></span>
+            Sign in with Discord
+        </button>
     </div>
+</section>
 
-    <h1 class="heading-level-1 u-margin-32">Init Giveaway!</h1>
+<style>
+    section {
+        width: 100%;
+        z-index: 0;
+        position: relative;
+        top: 0;
+        width: fit-content;
+        height: min-content;
+        margin: auto;
+    }
 
-    <p class="body-text-1 u-bold u-margin-32">Login with Discord and get a change to win an Init_ t-shirt!</p>
+    @media (max-width: 768px) {
+        img {
+            max-width: 80%;
+        }
+    }
 
-    <button class="button is-big u-margin-32" on:click={login}>Sign in with Discord</button>
-</div>
+    @media (min-width: 768px) {
+        img {
+            max-width: 60%;
+        }
+    }
+</style>

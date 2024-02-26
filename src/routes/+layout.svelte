@@ -1,5 +1,17 @@
 <script>
     import '../app.css';
-</script>
+    import "@appwrite.io/pink";
+    import "@appwrite.io/pink-icons";
+</script>  
 
-<slot />
+<section class="u-flex-vertical">
+    <slot />
+</section>
+
+
+<style>
+    section {
+        height: 100%;
+        width: 100%;
+    }
+</style>

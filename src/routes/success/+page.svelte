@@ -2,6 +2,7 @@
     import { user } from "$lib/user";
     import { db } from "$lib/database";
 	import { onMount } from "svelte";
+    import NavBar from "../../components/NavBar.svelte";
     
     let userId = '';
 
@@ -15,7 +16,9 @@
     });
 </script>
 
+<NavBar />
+
 <div class="container u-flex-vertical">
-    <h1 class="heading-level-1 u-margin-32">Success!</h1>
-    <p class="body-text-1 u-bold u-margin-32">Thanks for participating in the giveaway, {userId}</p>
+    <h1 class="heading-level-1 u-margin-32 u-normal">Success!</h1>
+    <p class="body-text-1 u-margin-32 u-normal">Thanks for participating in the giveaway, {userId}</p>
 </div>
