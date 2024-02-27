@@ -13,7 +13,7 @@ export const db = {
 		var options = [];
 
 		entries.documents.forEach((entry) => {
-			options.push({label: entry.discordName});
+			options.push({ label: entry.discordName });
 		});
 
 		return { options: options, total: entries.total };
