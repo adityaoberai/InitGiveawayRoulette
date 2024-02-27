@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Query, ID } from 'appwrite';
 import { database } from './appwrite';
-import { COLLECTION_NAME, DATABASE_NAME } from '../constants';
+import { COLLECTION_NAME, DATABASE_NAME } from './constants';
 
 export const db = {
 	list: async () => {
@@ -13,10 +13,10 @@ export const db = {
 		var options = [];
 
 		entries.documents.forEach((entry) => {
-			options.push({label: entry.discordName});
+			options.push({ label: entry.discordName });
 		});
 
-		return options;
+		return { options: options, total: entries.total };
 	},
 
 	add: async (discordName) => {

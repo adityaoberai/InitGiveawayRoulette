@@ -1,24 +1,24 @@
 <script>
-    import { user } from "$lib/user";
-    import { db } from "$lib/database";
-	import { onMount } from "svelte";
-    import NavBar from "../../components/NavBar.svelte";
-    
-    let userId = '';
+	import { user } from '$lib/user';
+	import { db } from '$lib/database';
+	import { onMount } from 'svelte';
+	import NavBar from '../../components/NavBar.svelte';
 
-    async function getUserId() {
-        userId = (await user.get()).name;
-        await db.add(userId);
-    }
+	let userId = '';
 
-    onMount(() => {
-        getUserId();
-    });
+	async function getUserId() {
+		userId = (await user.get()).name;
+		await db.add(userId);
+	}
+
+	onMount(() => {
+		getUserId();
+	});
 </script>
 
 <NavBar />
 
 <div class="container u-flex-vertical">
-    <h1 class="heading-level-1 u-margin-32 u-normal">Success!</h1>
-    <p class="body-text-1 u-margin-32 u-normal">Thanks for participating in the giveaway, {userId}</p>
+	<h1 class="heading-level-1 u-margin-32 u-normal">Success!</h1>
+	<p class="body-text-1 u-margin-32 u-normal">Thanks for participating in the giveaway, {userId}</p>
 </div>
