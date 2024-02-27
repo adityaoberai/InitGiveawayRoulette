@@ -1,7 +1,10 @@
 import { db } from '$lib/database';
 
 export async function load() {
+	var dbResponse = await db.list();
+
 	return {
-		entries: await db.list()
+		entries: dbResponse.options,
+		total: dbResponse.total
 	};
 }

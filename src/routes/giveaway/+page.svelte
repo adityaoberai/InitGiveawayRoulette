@@ -5,20 +5,33 @@
 	import { onMount } from 'svelte';
     import InitHeading from '../../components/InitHeading.svelte';
     import * as easing from 'easing-utils';
-	
-    let heading = 'Find the winner';
+    import { client } from '$lib/appwrite';
+    import { DATABASE_NAME, COLLECTION_NAME } from '$lib/constants';
 
     export let data;
+
+    let wheel = null;
+
+    var wheelContainer = null;
 
 	var props = {
         items: data.entries,
         itemLabelRadiusMax: 0.5
     }
+    
+    let heading = `${props.items.length} people are registered!`;
 
-    let wheel = null;
+    var unsubscribe = client.subscribe(`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents` , response => {
+        console.log(response.payload);
+        props.items.push({label: response.payload.discordName});
+        heading = `${props.items.length} people are registered!`;
+        removeWheel();
+        createWheel();
+        console.log(props.items);
+    })
 
     async function spin() {
-
+        unsubscribe();
         var winningIndex = Math.floor(Math.random() * props.items.length);
         var duration = 5000;
         var spinToCenter = false;
@@ -34,10 +47,14 @@
         };
     }
 
-    onMount(() => {
-        var container = document.querySelector('.wheel-container');
+    function removeWheel() {
+        while(wheelContainer.hasChildNodes()) {
+            wheelContainer.removeChild(wheelContainer.firstChild);
+        }
+    }
 
-        wheel = new Wheel(container, props);
+    function createWheel() {
+        wheel = new Wheel(wheelContainer, props);
         wheel.radius = 0.95;
         wheel.isInteractive = false;
         wheel.overlayImage = '/picker.png';
@@ -47,6 +64,11 @@
         wheel.itemLabelFontSize = 20;
         wheel.borderColor = '#3d3d3f';
         wheel.lineColor = '#3d3d3f';
+    }
+
+    onMount(() => {
+        wheelContainer = document.querySelector('.wheel-container');
+        createWheel();
     });
 </script>
 
