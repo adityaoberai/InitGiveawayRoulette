@@ -24,12 +24,10 @@
 	var unsubscribe = client.subscribe(
 		`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents`,
 		(response) => {
-			console.log(response.payload);
 			props.items.push({ label: response.payload.discordName });
 			heading = `${props.items.length} people are registered!`;
 			removeWheel();
 			createWheel();
-			console.log(props.items);
 		}
 	);
 
