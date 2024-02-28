@@ -21,15 +21,7 @@
 
 	let heading = `${props.items.length} people are registered!`;
 
-	var unsubscribe = client.subscribe(
-		`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents`,
-		(response) => {
-			props.items.push({ label: response.payload.discordName });
-			heading = `${props.items.length} people are registered!`;
-			removeWheel();
-			createWheel();
-		}
-	);
+	var unsubscribe = null;
 
 	async function spin() {
 		unsubscribe();
@@ -74,7 +66,23 @@
 		wheel.lineColor = '#3d3d3f';
 	}
 
+	function subscribe() {
+		return client.subscribe(
+			`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents`,
+			(response) => {
+				console.log(response);
+				props.items.push({ label: response.payload.discordName });
+				heading = `${props.items.length} people are registered!`;
+				removeWheel();
+				createWheel();
+		}
+	);
+	}
+
 	onMount(() => {
+		if(unsubscribe === null) {
+			unsubscribe = subscribe();
+		}
 		wheelContainer = document.querySelector('.wheel-container');
 		createWheel();
 	});
