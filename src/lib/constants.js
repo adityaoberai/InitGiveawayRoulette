@@ -4,4 +4,4 @@ export const APPWRITE_PROJECT = 'initraffle';
 
 export const DATABASE_NAME = 'raffledb';
 
-export const COLLECTION_NAME = 'day1';
+export const COLLECTION_NAME = 'day3';
