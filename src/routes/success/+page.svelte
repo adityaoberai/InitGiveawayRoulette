@@ -7,8 +7,8 @@
 	let userId = '';
 
 	async function getUserId() {
-		userId = (await user.get()).name;
-		await db.add(userId);
+		var currentUser = await user.get();
+		await db.add(currentUser.name, currentUser.email);
 	}
 
 	onMount(() => {
