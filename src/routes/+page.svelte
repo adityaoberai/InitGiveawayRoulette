@@ -13,10 +13,10 @@
 	<div class="container u-flex-vertical">
 		<InitHeading heading="Giveaway" />
 
-		<img src="/tshirt.png" alt="Plain black T-shirt with the text Init" />
+		<img src="/giveaway.png" alt="Plain black T-shirt with the text Init and a keyboard branded with the Appwrite logo on the Escape key" />
 
 		<p class="heading-level-6 u-margin-32">
-			Login with Discord and get a chance to win an Init_ T-shirt!
+			Login with Discord and get a chance to win some amazing gifts!
 		</p>
 
 		<button class="button is-big u-margin-32" on:click={login}>
@@ -35,17 +35,22 @@
 		width: fit-content;
 		height: min-content;
 		margin: auto;
+		text-align: center;
+	}
+
+	img {
+		border-radius: var(--border-radius-medium);
 	}
 
 	@media (max-width: 768px) {
 		img {
-			max-width: 80%;
+			max-width: 90%;
 		}
 	}
 
 	@media (min-width: 768px) {
 		img {
-			max-width: 60%;
+			max-width: 75%;
 		}
 	}
 </style>
