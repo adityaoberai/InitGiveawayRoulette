@@ -11,6 +11,7 @@ body {
 	background-color: #19191c;
 	display: flex;
 	align-items: center;
+	z-index: 0;
 }
 
 .container {
