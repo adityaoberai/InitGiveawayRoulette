@@ -17,17 +17,21 @@ body {
 .container {
 	align-items: center;
 	justify-content: center;
-	max-width: 50%;
-	width: fit-content;
-	height: min-content;
 	background-color: rgba(35, 35, 37);
 	border-radius: 16px;
 	border: 1px solid #ffffff14;
 	margin: auto;
-	padding: 0;
+	max-width: 50%;
+	width: fit-content;
+	height: min-content;
 }
 
 h1 {
+	color: #adadb0;
+	font-family: 'Aeonik Pro';
+}
+
+h2 {
 	color: #adadb0;
 	font-family: 'Aeonik Pro';
 }
@@ -39,7 +43,7 @@ p {
 
 @media (max-width: 768px) {
 	.container {
-		max-width: 80%;
+		max-width: 85%;
 	}
 }
 

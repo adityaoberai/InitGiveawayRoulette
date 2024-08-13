@@ -1,4 +1,4 @@
-<nav class="u-width-full-line">
+<nav class="u-width-full-line u-padding-32">
 	<a href="/">
 		<img class="u-width-140" src="/logotype.svg" alt="Appwrite logo" />
 	</a>
@@ -9,9 +9,10 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		padding: 32px;
 		top: 0;
 		position: absolute;
 		z-index: 0;
+		align-self: center;
+		height: 15vh;
 	}
 </style>

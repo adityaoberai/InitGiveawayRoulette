@@ -22,8 +22,8 @@ export const db = {
 	add: async (discordName, email) => {
 		try {
 			await database.createDocument(DATABASE_NAME, COLLECTION_NAME, ID.unique(), {
-				discordName: discordName,
-				email: email
+				discordName,
+				email
 			});
 			console.log('Added to the raffle');
 		} catch (error) {

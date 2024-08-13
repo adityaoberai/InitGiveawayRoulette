@@ -3,7 +3,7 @@
 
 	import { Wheel } from 'spin-wheel';
 	import { onMount } from 'svelte';
-	import InitHeading from '../../components/InitHeading.svelte';
+	import PageHeading from '../../components/PageHeading.svelte';
 	import * as easing from 'easing-utils';
 	import { client } from '$lib/appwrite';
 	import { DATABASE_NAME, COLLECTION_NAME } from '$lib/constants';
@@ -89,7 +89,7 @@
 </script>
 
 <section class="u-flex-vertical u-gap-16">
-	<InitHeading {heading} />
+	<PageHeading {heading} />
 	<div class="wheel u-flex-vertical">
 		<div class="wheel-container u-flex-vertical"></div>
 	</div>
