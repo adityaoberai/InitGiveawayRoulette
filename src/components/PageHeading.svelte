@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-	<h1 class="heading-level-1 u-margin-block-start-auto u-normal">init<span>_</span></h1>
+	<img class="u-margin-block-start-auto u-normal" src="/init.svg" alt="Init logo" />
 	<h2 class="heading-level-2 u-margin-block-start-auto u-normal">{heading}</h2>
 </div>
 
