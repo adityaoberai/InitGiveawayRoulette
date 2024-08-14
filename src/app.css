@@ -17,9 +17,7 @@ body {
 .container {
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(35, 35, 37);
-	border-radius: 16px;
-	border: 1px solid #ffffff14;
+	background-color: transparent;
 	margin: auto;
 	max-width: 50%;
 	width: fit-content;
