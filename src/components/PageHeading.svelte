@@ -15,14 +15,6 @@
 		text-align: center;
 	}
 
-	h1 {
-		color: hsl(var(--color-neutral-0));
-	}
-
-	span {
-		color: hsl(var(--color-primary-100));
-	}
-
 	@media (max-width: 768px) {
 		.card {
 			width: 95%;

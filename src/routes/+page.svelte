@@ -46,7 +46,6 @@
 	}
 
 	img {
-		border-radius: var(--border-radius-medium);
 		max-width: 70%;
 	}
 
