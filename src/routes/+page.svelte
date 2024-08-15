@@ -10,7 +10,7 @@
 
 <NavBar />
 <section id="giveaway" class="u-flex-vertical">
-	<div class="container u-flex-vertical">
+	<div class="container container-transparent u-flex-vertical">
 		<PageHeading heading="Giveaway" />
 
 		<img
@@ -46,7 +46,6 @@
 	}
 
 	img {
-		border-radius: var(--border-radius-medium);
 		max-width: 70%;
 	}
 

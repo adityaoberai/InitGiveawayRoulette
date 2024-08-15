@@ -17,13 +17,20 @@ body {
 .container {
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(35, 35, 37);
-	border-radius: 16px;
-	border: 1px solid #ffffff14;
 	margin: auto;
 	max-width: 50%;
 	width: fit-content;
 	height: min-content;
+}
+
+.container-with-bg {
+	background-color: rgb(35, 35, 37);
+	border-radius: var(--border-radius-medium);
+	border: 1px solid rgb(52, 52, 54);
+}
+
+.container-transparent {
+	background-color: transparent;
 }
 
 h1 {

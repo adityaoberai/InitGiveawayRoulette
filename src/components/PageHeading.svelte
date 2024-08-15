@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-	<h1 class="heading-level-1 u-margin-block-start-auto u-normal">init<span>_</span></h1>
+	<img class="u-margin-block-start-auto u-normal" src="/init.svg" alt="Init logo" />
 	<h2 class="heading-level-2 u-margin-block-start-auto u-normal">{heading}</h2>
 </div>
 
@@ -13,14 +13,6 @@
 		background-color: transparent;
 		border: 0;
 		text-align: center;
-	}
-
-	h1 {
-		color: hsl(var(--color-neutral-0));
-	}
-
-	span {
-		color: hsl(var(--color-primary-100));
 	}
 
 	@media (max-width: 768px) {
