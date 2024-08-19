@@ -4,4 +4,4 @@ export const APPWRITE_PROJECT = 'initraffle';
 
 export const DATABASE_NAME = 'init-2-db';
 
-export const COLLECTION_NAME = 'day0';
+export const COLLECTION_NAME = 'day1';
