@@ -8,7 +8,18 @@
 
 	async function getUserId() {
 		var currentUser = await user.get();
+
+		if (!currentUser.labels.includes('init2')) {
+			fetch('/success/labels', {
+				method: 'POST',
+				headers: {
+					'x-user-id': currentUser.$id,
+				}
+			});
+		}
+
 		await db.add(currentUser.name, currentUser.email);
+
 		userId = currentUser.name;
 	}
 
