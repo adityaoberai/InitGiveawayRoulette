@@ -29,7 +29,7 @@
 	"type": "module",
 	"dependencies": {
 		"@appwrite.io/pink": "^0.5.0",
-		"appwrite": "^13.0.2",
+		"appwrite": "^15.0.0",
 		"easing-utils": "^1.0.0",
 		"node-appwrite": "^13.0.0",
 		"spin-wheel": "^4.3.1"
