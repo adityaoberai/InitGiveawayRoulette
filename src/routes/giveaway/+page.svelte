@@ -70,19 +70,17 @@
 		return client.subscribe(
 			`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents`,
 			(response) => {
-				console.log(response);
-				if(response.events.includes(`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents.create`)) {
+				if(response.events.includes(`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents.*.create`)) {
 					props.items.push({ label: response.payload.discordName });
-				}
-
-				if(response.events.includes(`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents.delete`)) {
+				} 
+				
+				if(response.events.includes(`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents.*.delete`)) {
 					props.items = props.items.filter((item) => item.label !== response.payload.discordName);
 				}
-
-				heading = `${props.items.length} people are registered!`;
 				
+				heading = `${props.items.length} people are registered!`;
 				removeWheel();
-				createWheel();
+				createWheel();				
 			}
 		);
 	}
